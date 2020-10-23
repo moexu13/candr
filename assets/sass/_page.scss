@@ -1,10 +1,77 @@
-.container {
-  background-color: $color-tertiary-dark;
-  margin: 0;
-  padding: 0;
+.cards {
+  transform: translateY(-4rem);
+
+  &__card {
+    background-color: $color-white;
+    border: 6px solid;
+    border-image: radial-gradient($color-primary, $color-primary-dark) 1;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.1),
+      0 0.6rem 2rem 0 rgba(0, 0, 0, 0.09);
+    height: 8rem;
+    outline-offset: 1rem;
+    position: relative;
+    width: 30rem;
+    transition: all 0.22s;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    &:hover {
+      border: none;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      outline: 1rem solid $color-primary-dark;
+      transform: scale(1.05) translateY(-0.5rem);
+    }
+
+    &--text {
+      color: $color-primary-dark;
+      font-family: Copperplate;
+      font-size: 2rem;
+      left: 50%;
+      position: absolute;
+      text-shadow: 2px 2px 8px rgba($color-black, 0.2);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:hover &__card:not(:hover) {
+    transform: scale(0.95);
+  }
+}
+
+.header {
+  background-image: radial-gradient(
+    $color-tertiary,
+    lighten($color-tertiary-dark, 2%)
+  );
 }
 
 .header__logo img {
+  display: block;
   height: auto;
+  margin: 0 auto;
+  padding: 4rem 0 14rem 0;
   width: 80rem;
+}
+
+.main-copy {
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  width: 75%;
+
+  &--heading {
+    margin: 3.2rem 0;
+  }
+
+  &--text {
+    margin-bottom: 4rem;
+  }
+}
+
+.wrapper {
+  background-color: $color-white;
+  margin: 0;
+  padding: 0;
 }
