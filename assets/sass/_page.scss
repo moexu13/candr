@@ -1,44 +1,175 @@
+.btn {
+  border: none;
+  border-radius: 2px;
+  font-family: Copperplate;
+  font-size: 2rem;
+  height: 4rem;
+  margin: 0 auto;
+  width: 20rem;
+}
+
+.btn-submit {
+  background-color: $color-tertiary;
+  color: $color-primary-light;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: lighten($color-tertiary, 5%);
+    color: $color-primary-light;
+    outline: none;
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-1px);
+  }
+}
+
 .cards {
-  transform: translateY(-4rem);
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6rem 3rem;
+  perspective: 80rem;
 
   &__card {
-    background-color: $color-white;
-    border: 6px solid;
-    border-image: radial-gradient($color-primary, $color-primary-dark) 1;
     box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.1),
       0 0.6rem 2rem 0 rgba(0, 0, 0, 0.09);
-    height: 8rem;
-    outline-offset: 1rem;
+    height: 26rem;
     position: relative;
-    width: 30rem;
-    transition: all 0.22s;
-
-    &:not(:last-child) {
-      margin-right: 3rem;
-    }
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
+    width: 22rem;
 
     &:hover {
-      border: none;
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      outline: 1rem solid $color-primary-dark;
-      transform: scale(1.05) translateY(-0.5rem);
+      transform: rotateY(180deg);
     }
 
-    &--text {
-      color: $color-primary-dark;
-      font-family: Copperplate;
-      font-size: 2rem;
-      left: 50%;
+    &__face {
       position: absolute;
-      text-shadow: 2px 2px 8px rgba($color-black, 0.2);
-      top: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: 1s ease-in-out;
+
+      img {
+        height: 26rem;
+        object-fit: cover;
+        width: 22rem;
+      }
+
+      &--back {
+        background-image: linear-gradient(
+          $color-tertiary-light,
+          $color-tertiary,
+          30%,
+          $color-tertiary,
+          80%,
+          $color-tertiary-dark
+        );
+        position: relative;
+        transform: rotateY(180deg);
+
+        & a {
+          text-decoration: none;
+        }
+
+        &--inner {
+          border: solid 4px $color-primary;
+          height: 20rem;
+          left: 2.5rem;
+          position: absolute;
+          top: 3rem;
+          width: 17rem;
+
+          & img {
+            height: 3.5rem;
+            left: 6.5rem;
+            position: absolute;
+            top: 0.5rem;
+            width: 3.5rem;
+          }
+        }
+
+        &--text {
+          bottom: 1rem;
+          color: $color-primary-light;
+          font-family: Copperplate;
+          font-size: 2rem;
+          padding: 3rem 1rem;
+          position: absolute;
+          text-align: center;
+        }
+      }
     }
   }
+}
 
-  &:hover &__card:not(:hover) {
-    transform: scale(0.95);
+.contact-form {
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.1),
+    0 0.6rem 2rem 0 rgba(0, 0, 0, 0.09);
+  margin: 0 auto;
+  margin-bottom: 12rem;
+  margin-top: 12rem;
+  padding: 3rem 9rem;
+  width: 60%;
+}
+
+.footer {
+  background-image: linear-gradient(
+    $color-tertiary,
+    darken($color-tertiary-light, 15%)
+  );
+  color: $color-primary;
+  height: 20rem;
+  position: relative;
+  width: 100%;
+
+  &__attribution {
+    bottom: 20%;
+    font-family: Copperplate;
+    font-size: 1.6rem;
+    left: 4rem;
+    position: absolute;
   }
+
+  &__contact-info {
+    color: $color-primary;
+  }
+
+  &__social-bar {
+    letter-spacing: 1rem;
+    left: 4rem;
+    position: absolute;
+    bottom: 40%;
+  }
+
+  & a {
+    color: $color-primary;
+    font-size: 2.4rem;
+    text-decoration: none;
+  }
+}
+
+.form-container {
+  margin-top: 2rem;
+}
+
+.form-control {
+  border: solid 1px lighten($color-black, 40%);
+  font-size: 1.6rem;
+  outline: none;
+  resize: none;
+}
+
+.form-label {
+  color: $color-tertiary-dark;
+  font-family: Copperplate;
+  font-size: 2rem;
 }
 
 .header {
@@ -67,6 +198,53 @@
 
   &--text {
     margin-bottom: 4rem;
+  }
+}
+
+.menu {
+  transform: translateY(-4rem);
+
+  &__menu__item {
+    background-color: $color-white;
+    border: 6px solid;
+    border-image: radial-gradient($color-primary, $color-primary-dark) 1;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.1),
+      0 0.6rem 2rem 0 rgba(0, 0, 0, 0.09);
+    height: 8rem;
+    outline-offset: 1rem;
+    position: relative;
+    transition: all 0.2s;
+    width: 30rem;
+
+    &:hover {
+      border: none;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      outline: 1rem solid $color-primary-dark;
+      transform: scale(1.05) translateY(-0.5rem);
+    }
+
+    &--text {
+      color: $color-primary-dark;
+      font-family: Copperplate;
+      font-size: 2rem;
+      left: 50%;
+      position: absolute;
+      text-shadow: 2px 2px 8px rgba($color-black, 0.2);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:hover &__menu__item:not(:hover) {
+    transform: scale(0.95);
+  }
+}
+
+.portfolio {
+  margin: 5rem 0;
+
+  &__heading {
+    margin-bottom: 2rem;
   }
 }
 
