@@ -28,12 +28,12 @@
       <section class="menu">
         <div class="row justify-content-center m-0">
           <n-link to="#services">
-            <div class="menu__menu__item mr-5">
+            <div class="menu__menu__item">
               <span class="menu__menu__item--text">Our Services</span>
             </div>
           </n-link>
           <n-link to="#portfolio">
-            <div class="menu__menu__item mr-5">
+            <div class="menu__menu__item">
               <span class="menu__menu__item--text">Our Work</span>
             </div>
           </n-link>
@@ -46,22 +46,34 @@
       </section>
 
       <section id="main-copy" class="main-copy">
-        <h2 class="main-copy--heading">Get a Website Tailored for Your Business</h2>
-        <p class="main-copy--text">
-          Your web presence is more important than ever. Your customers expect to be able to find and do business with you online. 
+        <h2 class="main-copy--heading">Remember When Websites Looked Like This?</h2>
+        <p class="main-copy--text main-copy__retro">
+          <img src="~assets/images/screenshots/retro.png" alt="screenshot of really bad 90s style website" />
         </p>
 
+        <p class="main-copy--text"> If you aren't regularly updating your website this is what your website looks like to your customers.</p>
 
-        <h3 class="main-copy--heading">Your Website Should Grow Your Business</h3>
+        <h3 class="main-copy--heading">Modernize Your Website</h3>
         <p class="main-copy--text">
-          Small businesses have been hit hard by the pandemic. Providing online services can help your business not only survive but thrive. 
+          Your web presence is more important than ever. Your customers expect to be able to find and do business with you online. A website that's outdated, slow, broken, or hard to find drives away customers and harms your business.
+        </p>
+        <p class="main-copy--text">
+          Upgrading your website is simpler and faster than you might think. We offer several different options to fit your budget. <n-link to="#contact">Contact us</n-link> today. 
         </p>
 
-        <h3 id="services" class="main-copy--heading">What We Offer</h3>
+        <h3 id="services" class="main-copy--heading">Our Services</h3>
 
-        <p class="main-copy--text">
+        <p class="main-copy--text main-copy--text--bordered">
           We offer a variety of services to help your business.
-        </p>      
+        </p>
+          <!-- <hr class="main-copy--line" /> -->
+          <ul class="main-copy--list">
+            <li>Web Design and Development</li>
+            <li>Site Hosting</li>
+            <li>Online Branding</li>
+            <li>E-Commerce</li>
+            <li>Search Engine Optimization</li>
+          </ul>      
       </section>
       
       <section id="portfolio" class="portfolio">
@@ -84,6 +96,7 @@
               </a>
             </div>
         </div>
+        
           <div class="cards__card">
             <div class="cards__card__face cards__card__face--front">
               <a href="https://richthetreeman.com" target="_blank">
@@ -101,6 +114,7 @@
               </a>
             </div>
           </div>
+
           <div class="cards__card">
             <div class="cards__card__face cards__card__face--front">
               <a href="https://terryalbarella.com" target="_blank">
@@ -118,6 +132,7 @@
               </a>
             </div>
           </div>
+
           <div class="cards__card">
             <div class="cards__card__face cards__card__face--front">
               <a href="https://highclasstree.services" target="_blank">
@@ -141,7 +156,7 @@
       <section id="contact" class="contact-form">
         <h2 class="contact__heading">Contact Us</h2>
         <div class="form__container">
-          <form name="contact" netlify>
+          <form name="contact" method="post" netlify>
             <div class="form-group mt-4">
               <label for="name" class="form-label">Name</label>
               <input
