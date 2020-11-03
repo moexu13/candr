@@ -1,0 +1,161 @@
+.retro-wrapper {
+  // background-image: url("/retro/motherboard.jpg");
+  // background-repeat: repeat;
+  position: relative;
+}
+
+.retro {
+  font-family: "Times New Roman";
+
+  &__footer {
+    background-color: $color-counter-blue;
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+
+    &--counter {
+      padding-left: 20%;
+    }
+
+    &--ie {
+      bottom: 2rem;
+      height: 6rem;
+      left: 4rem;
+      object-fit: contain;
+      position: absolute;
+      width: auto;
+    }
+  }
+
+  &__grid {
+    background-color: $color-white;
+    border: $retro-border;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 32rem);
+    position: absolute;
+    right: 4rem;
+    top: 10rem;
+    width: 70%;
+
+    & img {
+      height: 12rem;
+      object-fit: contain;
+      width: 12rem;
+    }
+
+    & ul {
+      font-family: "Times New Roman";
+      font-size: 1.6rem;
+      list-style: none;
+    }
+
+    &--item {
+      padding-left: 4rem;
+      padding-top: 3rem;
+
+      &-1,
+      &-2,
+      &-4,
+      &-5 {
+        border-bottom: $retro-border;
+        border-right: $retro-border;
+      }
+
+      &-3,
+      &-6 {
+        border-bottom: $retro-border;
+      }
+
+      &-7,
+      &-8 {
+        border-right: $retro-border;
+      }
+    }
+  }
+
+  &__header {
+    background-color: $color-yellow;
+    color: $color-black;
+    font-family: "Times New Roman";
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-shadow: none;
+
+    &--subtitle {
+      color: $color-red;
+      text-align: center;
+    }
+  }
+
+  &__policies {
+    margin-top: 28rem;
+    text-align: center;
+
+    & h2 {
+      background-color: $color-yellow;
+      color: $color-blue;
+      font-family: "Times New Roman";
+      font-size: 2.4rem;
+    }
+
+    & img {
+      height: 5rem;
+      object-fit: contain;
+      width: 5rem;
+    }
+  }
+
+  &--red {
+    color: $color-red;
+    font-weight: bold;
+  }
+
+  &__sidebar {
+    background-color: $color-lighter-yellow;
+    border: $retro-border;
+    font-size: 1.6rem;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    width: 24rem;
+
+    & img {
+      margin-left: 6rem;
+    }
+
+    & hr {
+      border: $retro-border-small;
+    }
+
+    & ul {
+      list-style: none;
+    }
+
+    &--item {
+      margin-left: 1rem;
+      font-size: 1.4rem;
+    }
+
+    &--title {
+      color: $color-black;
+      font-size: 2.4rem;
+      font-family: "Times New Roman";
+
+      & a {
+        color: $color-blue;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__subheading {
+    color: $color-red;
+    font-family: "Comic Sans MS";
+  }
+
+  &__text {
+    font-family: $retro-font;
+    font-size: 1.6rem;
+  }
+}

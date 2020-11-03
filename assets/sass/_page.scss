@@ -341,10 +341,11 @@
   }
 
   &__retro img {
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.1),
+      0 0.6rem 2rem 0 rgba(0, 0, 0, 0.09);
     display: block;
     height: 50rem;
     margin: 0 auto;
-    padding: 2rem;
     width: auto;
 
     @include respond(phone) {
@@ -357,7 +358,7 @@
   }
 
   &--text {
-    margin: 2rem 0;
+    margin: 3rem 0;
 
     @include respond(phone) {
       hyphens: auto;
